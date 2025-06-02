@@ -5771,7 +5771,7 @@ async def process_stripe_five(client: Client, message: Message, user_info: dict,
     currency = bin_data.get('country_currencies', ['N/A'])[0].upper() if bin_data else 'N/A'
 
     # API call to xronak.whf.bz (replace with your actual API)
-    api_url = f"https://all-ezb1.onrender.com/xx?cc={cc}" 
+    api_url = f"https://all-gm57.onrender.com/xx?cc={cc}" 
 
     sticker_message = await message.reply_sticker("CAACAgUAAx0CciJZnAACSmFmxro-KQtL9T9LmoBcl_2VR0EVJQACMAQAAhiVeVTGfoGt2E8GCh4E")
     processing_message = await message.reply('<b>🍳 Cooking Something Good....!🍷</b>', parse_mode=enums.ParseMode.HTML)
@@ -5904,7 +5904,7 @@ async def mass_check_stripe_five(client, message, user_info, *args, **kwargs):
                 bin_info = "Unknown"
 
             # Check Stripe API
-            api_url = f"https://all-ezb1.onrender.com/xx?cc={cc}"
+            api_url = f"https://all-gm57.onrender.com/xx?cc={cc}"
             try:
                 async with session.get(api_url) as response:
                     api_response = await response.text()  # Get the response as text
@@ -6619,7 +6619,7 @@ async def process_stripe_five(client: Client, message: Message, user_info: dict,
     currency = bin_data.get('country_currencies', ['N/A'])[0].upper() if bin_data else 'N/A'
 
     # API call to xronak.whf.bz (replace with your actual API)
-    api_url = f"https://all-ezb1.onrender.com/skbased?cc={cc}"
+    api_url = f"https://all-gm57.onrender.com/skbased?cc={cc}"
     vbv_url = f"http://xronak.site/vbv.php?lista={cc}"
 
     sticker_message = await message.reply_sticker("CAACAgUAAx0CciJZnAACSmFmxro-KQtL9T9LmoBcl_2VR0EVJQACMAQAAhiVeVTGfoGt2E8GCh4E")
@@ -6757,7 +6757,7 @@ async def mass_check_stripe_five(client, message, user_info, *args, **kwargs):
                 bin_info = "Unknown"
 
             # Check Stripe API
-            api_url = f"https://all-ezb1.onrender.com/skbased?cc={cc}"
+            api_url = f"https://all-gm57.onrender.com/skbased?cc={cc}"
             try:
                 async with session.get(api_url) as response:
                     api_response = await response.text()  # Get the response as text
@@ -6829,7 +6829,7 @@ async def mass_check_stripe_five(client, message, user_info, *args, **kwargs):
     os.remove(file_path)
     
 #-------------------------
-ver = "alpha2.5.7-9"
+ver = "alpha2.5.7-10"
 
 print(f"\nBot version 》{ver}\n")
 
