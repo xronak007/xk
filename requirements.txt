@@ -1,0 +1,16 @@
+bs4
+aiohttp
+aiofiles
+aiohttp-socks
+pyrogram
+watchdog
+requests
+flask
+stripe
+beautifulsoup4
+logging
+fake-useragent
+urllib3
+python-dotenv
+python-telegram-bot==22.1
+pandas
